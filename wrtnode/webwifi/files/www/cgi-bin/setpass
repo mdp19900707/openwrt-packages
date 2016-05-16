@@ -9,7 +9,7 @@ if [ -n "$QUERY_STRING" ]; then
 	firstvalue=`echo $firstexp | cut -d'=' -f 2`
 
 	if [ "$firstkey"x = "password"x -o "$firstkey"x = "passwd"x ]; then
-		apass=$secondvalue
+		apass=$firstvalue
 	else
 		echo "{\"result\"=\"error\",\"message\"=\"Please input the right format like password=xxxx\"}"
 		exit 1
